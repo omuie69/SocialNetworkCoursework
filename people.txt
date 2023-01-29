@@ -1,0 +1,11 @@
+Alice: Ivy
+Bob: Alice, Charlie
+Charlie: Jane, Bob, Dave
+Dave: Bob, Frank, Ivy, Henry
+Eve: Ivy, Alice, Charlie
+Frank: Dave
+Gary: Charlie, Alice
+Henry: Ivy, Dave, Gary, Eve
+Ivy: Henry, Eve, Bob, Charlie
+Jane: Dave, Henry
+
