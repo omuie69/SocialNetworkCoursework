@@ -22,6 +22,3 @@ class User(SocialNetwork):
 obj = User()
 obj.friends_amount()
 print(obj.friends_amount())
-    
-
-    
