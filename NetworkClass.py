@@ -63,5 +63,3 @@ class SocialNetwork:
             sys.exit()
         else:
             print("Invalid input.")
-
-yesyesyes
