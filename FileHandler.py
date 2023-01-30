@@ -49,15 +49,3 @@ def function():
     else:
         print("Invalid input.")
         function()
-
-#create a function that will allow the user to select wether they want to read another file from the directory
-def function2():
-    answer = input("Would you like to read another file? (y/n) ")
-    if answer.lower() == "y":
-        function()
-    elif answer.lower() == "n":
-        print("Ok, the program will now exit.")
-        sys.exit()
-    else:
-        print("Invalid input.")
-        function2()

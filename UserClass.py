@@ -5,5 +5,24 @@
                         who their friends are
 """
 
+from NetworkClass import SocialNetwork
 
 # user class with two attributes, name and friends, which are inputted by the user
+class User(SocialNetwork):
+    def __init__(self):
+        name = input("Please enter your name: ")
+        name_index = self.get_people().index(name)
+        self.friends = self.friends[name_index].split(',')
+        self.name = name
+    
+    def friends_amount(self):
+        return len(self.friends)
+
+network = SocialNetwork()
+network.pretty_print()
+obj = User()
+obj.friends_amount()
+    
+    
+
+    
