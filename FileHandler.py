@@ -15,7 +15,7 @@ def function():
 
     if answer.lower() == "y":
         # Get the current directory
-        path = 'C:/Users/serba/OneDrive/Documents/GitHub/SocialNetworkCoursework'
+        path = 'C:/Users/Mihai/Desktop/CS/SocialNetworkCoursework'
         # Get a list of all files in the directory
         files = [f for f in os.listdir(path) if os.path.isfile(os.path.join(path, f))]
         while True:
