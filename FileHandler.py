@@ -36,11 +36,6 @@ def function():
                         name, friends = line.strip().split(':')
                         friends = friends.strip()
                     return lines
-                # Ask the user if they want to pick another file
-                pick_another = input("Would you like to pick another file? (y/n) ")
-                if pick_another.lower() == "n":
-                    print("Ok, the program will now exit.")
-                    sys.exit()
             except FileNotFoundError:
                 # Handle the exception if the file is not found
                 print("file not found")
@@ -53,4 +48,16 @@ def function():
         sys.exit()
     else:
         print("Invalid input.")
-        icup = function()
+        function()
+
+#create a function that will allow the user to select wether they want to read another file from the directory
+def function2():
+    answer = input("Would you like to read another file? (y/n) ")
+    if answer.lower() == "y":
+        function()
+    elif answer.lower() == "n":
+        print("Ok, the program will now exit.")
+        sys.exit()
+    else:
+        print("Invalid input.")
+        function2()

@@ -39,6 +39,27 @@ class SocialNetwork:
         else:
             print("Invalid input.")
 
+    #define a method that will allow the user to search for a name in the names list and if it is found, it will print the name and the friends of that name
+    def dood(self, name):
+        if name in self.names:
+            print(name, "has friends:", self.friends[self.names.index(name)])
+        else:
+            print("Name not found.")
+    
+    #define a method that will allow the user to input whether or not they'd like to see another file from the directory
+    def another_file(self):
+        answer = input("Would you like to read another file? (y/n) ")
+        if answer.lower() == "y":
+            function()
+        elif answer.lower() == "n":
+            print("Ok, the program will now exit.")
+            sys.exit()
+        else:
+            print("Invalid input.")
+
 #create an instance of the SocialNetwork class
 network = SocialNetwork(names, friends)
 print(network)
+
+choice = input("Would you like to search for a name? (y/n) ")
+instance = dood(choice)
