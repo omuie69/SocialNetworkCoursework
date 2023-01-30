@@ -3,60 +3,42 @@
     Candidate number: 001235169-5
     Aim of the program:
 """
+import sys
+from FileHandler import function
+ 
+#create a variable that will hold the names of the users from the data file and the friends they have
+users = function()
+
+#create two lists that will split the names and the friends from the users variable
+names = []
+friends = []
+
+#iterate over the users variable and split the names and the friends into the two lists
+for user in users:
+    name, friend = user.split(':')
+    names.append(name)
+    friends.append(friend)
+
+#print(names)
+#print(friends)
+
+# Create a class called SocialNetwork
 
 class SocialNetwork:
-    def __init__(self):
-        self.connections = {}
-        self.common_friends = {}
-        self.members = set()
-
-    def add_connection(self, member1, member2):
-        """Add a connection between two members."""
-        self.members.add(member1)
-        self.members.add(member2)
-        if member1 in self.connections:
-            self.connections[member1].add(member2)
+    #define a method that takes in names and friends lists as parameters, asks the user if they want to pretty print the file and if they do, it prints the names and the friends in a nice format
+    def __init__(self, names, friends):
+        self.names = names
+        self.friends = friends
+        answer = input("Would you like to pretty print the file? (y/n) ")
+        if answer.lower() == "y":
+            for i in range(len(names)):
+                print(names[i], "has friends:", friends[i])
+        elif answer.lower() == "n":
+            print("Ok, the program will now exit.")
+            sys.exit()
         else:
-            self.connections[member1] = {member2}
-        if member2 in self.connections:
-            self.connections[member2].add(member1)
-        else:
-            self.connections[member2] = {member1}
+            print("Invalid input.")
 
-    def generate_common_friends(self):
-        """Generate the common_friends structure."""
-        for member1 in self.members:
-            for member2 in self.members:
-                if member1 == member2:
-                    continue
-                common_friends = self.connections[member1].intersection(self.connections[member2])
-                self.common_friends[(member1, member2)] = len(common_friends)
-
-    def recommend_friend(self, member):
-        """Recommend a friend for a member."""
-        friend = None
-        max_common_friends = -1
-        for other_member, common_friends in self.common_friends.items():
-            if member in other_member and common_friends > max_common_friends and other_member[0] != other_member[1]:
-                friend = other_member[0] if other_member[1] == member else other_member[1]
-                max_common_friends = common_friends
-        return f"Recommended friend for {member} is {friend}" if friend else f"Recommended friend for {member} is none"
-
-
-
-# Create an instance of the SocialNetwork class
-network = SocialNetwork()
-
-# Add connections between members
-network.add_connection("Adam", "Bob")
-network.add_connection("Adam", "Mia")
-network.add_connection("Adam", "Amir")
-network.add_connection("Bob", "Zia")
-network.add_connection("Mia", "Amir")
-
-# Generate the common_friends structure
-network.generate_common_friends()
-
-# Recommend a friend for a member
-print(network.recommend_friend("Mia"))
-print(network.recommend_friend("Bob"))
+#create an instance of the SocialNetwork class
+network = SocialNetwork(names, friends)
+print(network)
