@@ -5,20 +5,33 @@
                         who their friends are
 """
 
-from NetworkClass import SocialNetwork
+# Importing the SocialNetwork class
+from SocialNetwork import SocialNetwork
 
-# user class with two attributes, name and friends, which are inputted by the user
+# User class that inherits from the SocialNetwork class
 class User(SocialNetwork):
     def __init__(self):
+        # Call the init method of the parent class
         SocialNetwork.__init__(self)
+        
+        # Ask the user for their name
         name = input("Please enter your name: ")
+        
+        # Get the index of the user's name in the get_people list of the SocialNetwork class
         name_index = self.get_people().index(name)
+        
+        # Set the friends attribute of the User object to a list of the user's friends
         self.friends = self.get_friends()[name_index].split(',')
+        
+        # Set the name attribute of the User object to the user's name
         self.name = name
     
+    # Method to return the number of friends the User object has
     def friends_amount(self):
         return len(self.friends)
 
+# Create an object of the User class
 obj = User()
-obj.friends_amount()
-print(obj.friends_amount())
+
+# Call the friends_amount method of the User object
+print(obj.friends_amount(),"friends.")
