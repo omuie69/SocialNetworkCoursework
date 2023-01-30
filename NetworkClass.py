@@ -10,7 +10,7 @@ from FileHandler import function
 # Create a class called SocialNetwork
 
 class SocialNetwork:
-    
+
     def __init__(self):
         users = function()
 
@@ -64,3 +64,4 @@ class SocialNetwork:
         else:
             print("Invalid input.")
 
+yesyesyes
