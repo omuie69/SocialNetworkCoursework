@@ -1,27 +1,27 @@
 26
-A	M
-B
-C	Y
-D
-E
-F	W
-G	J	Q
+A
+B	F	Z
+C	T
+D	J
+E	M	L
+F	B
+G
 H
-I
-J	G	P
-K
-L
-M	A
-N	P	V
-O	T
-P	J	N
-Q	G
-R
-S	Z
-T	O
+I	K	M
+J	D
+K	S	I
+L	E
+M	I	E
+N	R
+O	S
+P
+Q
+R	W	N
+S	K	O
+T	C	W
 U
-V	N
-W	F
+V	W
+W	T	R	V
 X
-Y	C
-Z	S
+Y
+Z	B
