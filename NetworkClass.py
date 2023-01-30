@@ -10,7 +10,7 @@ from FileHandler import function
 # Create a class called SocialNetwork
 
 class SocialNetwork:
-
+    
     def __init__(self):
         users = function()
 
@@ -22,6 +22,7 @@ class SocialNetwork:
 
         self.names = names
         self.friends = friends
+        self.pretty_print()
     
     def get_people(self):
         return self.names
