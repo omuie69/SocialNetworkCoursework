@@ -26,7 +26,7 @@ class SocialNetwork:
     def get_people(self):
         return self.names
     
-    def all_friends(self):
+    def get_friends(self):
         return self.friends
 
     #define a method that takes in names and friends lists as parameters, asks the user if they want to pretty print the file and if they do, it prints the names and the friends in a nice format
